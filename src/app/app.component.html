@@ -1,0 +1,41 @@
+<h1>matAccordion</h1>
+<div>
+  <p>Accordion Options</p>
+  <p>Accordion Actions <sup>('Multi Expansion' mode only)</sup></p>
+  <div>
+    <button mat-button (click)="openAllFirst()" >Expand All</button>
+    <button mat-button (click)="closeAllFirst()" >Collapse All</button>
+  </div>
+  <p>Accordion Panel(s)</p>
+</div>
+<br>
+<mat-accordion [displayMode]="displayMode" [multi]="multi" id="newcha"
+              class="mat-expansion-demo-width" #firstAccordion="matAccordion">
+  <mat-expansion-panel #panel1  [hideToggle]="hideToggle">
+    <mat-expansion-panel-header>Section 1</mat-expansion-panel-header>
+    <p>This is the content text that makes sense here.</p>
+  </mat-expansion-panel>
+  <mat-expansion-panel #panel2 [hideToggle]="hideToggle" [disabled]="disabled">
+    <mat-expansion-panel-header>Section 2</mat-expansion-panel-header>
+    <p>This is the content text that makes sense here.</p>
+  </mat-expansion-panel>
+</mat-accordion>
+<br>
+<hr>
+<div>
+<mat-accordion [displayMode]="displayMode1" [multi]="multi" id="testing"
+              class="mat-expansion-demo-width" #secondAccordion="matAccordion">
+  <mat-expansion-panel #panel11  [hideToggle]="hideToggle1">
+    <mat-expansion-panel-header>Section 12</mat-expansion-panel-header>
+    <p>This is the content text that makes sense here.</p>
+  </mat-expansion-panel>
+  <mat-expansion-panel #panel11 [hideToggle]="hideToggle1" [disabled]="disabled">
+    <mat-expansion-panel-header>Section 13</mat-expansion-panel-header>
+    <p>This is the content text that makes sense here.</p>
+  </mat-expansion-panel>
+</mat-accordion>
+</div>
+<div>
+    <button mat-button (click)="openAllSecond()" >Expand All New</button>
+    <button mat-button (click)="closeAllSecond()" >Collapse All New</button>
+</div>
